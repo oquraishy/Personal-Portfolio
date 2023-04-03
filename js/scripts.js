@@ -1,14 +1,4 @@
-/*!
-    Title: Dev Portfolio Template
-    Version: 1.2.2
-    Last Change: 03/25/2020
-    Author: Ryan Fitzgerald
-    Repo: https://github.com/RyanFitzgerald/devportfolio-template
-    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
 
-    Description: This file contains all the scripts associated with the single-page
-    portfolio website.
-*/
 
 (function($) {
 
@@ -23,36 +13,38 @@
 
         // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
-
+    
         e.preventDefault();
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
-
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
-
+    
+        window.scrollTo(0, scrollDistance); // Use window.scrollTo for instant scroll
+    
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
             $('header, body').removeClass('active');
         }
     });
-
+    
     // Scroll to top
     $('#to-top').click(function() {
         $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+            scrollTop: scrollDistance + 'px'
+        }, 0, function() {
+            // Execute code after animation is complete
+            // For example, prevent default link behavior
+            e.preventDefault();
+        });
     });
-
+    
     // Scroll to first element
     $('#lead-down span').click(function() {
         var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, 500);
+        }, 150);
     });
-
+    
     // Create timeline
     $('#experience-timeline').each(function() {
 
@@ -92,8 +84,8 @@
     // Load additional projects
     $('#view-more-projects').click(function(e){
         e.preventDefault();
-        $(this).fadeOut(300, function() {
-            $('#more-projects').fadeIn(300);
+        $(this).fadeOut(100, function() {
+            $('#more-projects').fadeIn(25);
         });
     });
 

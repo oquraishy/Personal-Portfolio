@@ -14,7 +14,7 @@
     "coding",
     "dev"
   ],
-  "author": "Ryan Fitzgerald",
+  "author": "Ossama Quraishy",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.9.0",
@@ -27,5 +27,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "gulp-wait": "0.0.2"
-  }
+  },
+  "homepage": "https://oquraishy.github.io/Personal-Portfolio"
+  
 }
