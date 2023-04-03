@@ -1,0 +1,22 @@
+{
+  "name": "devportfolio-template",
+  "version": "1.2.2",
+  "description": "",
+  "main": "js/scripts.js",
+  "keywords": [
+    "portfolio",
+    "personal",
+    "website",
+    "tech",
+    "coding",
+    "dev"
+  ],
+  "author": "Ossama Quraishy",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
+  },
+  "homepage": "https://oquraishy.github.io/Personal-Portfolio"
+  
+}
